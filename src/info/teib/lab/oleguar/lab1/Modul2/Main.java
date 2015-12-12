@@ -2,19 +2,15 @@ package info.teib.lab.oleguar.lab1.Modul2;
 
 import java.util.Scanner;
 
-/**
- * Created by Юыху on 08.12.2015.
- */
-public class Main {
 
+public class Main {
     public static void main(String[] args) {
         Social social = new Social();
         System.out.println();
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        int number  = scanner.nextInt();
-        String mail  = scanner.nextLine();
-        Human human = new Human(name, mail, number);
+        int number = scanner.nextInt();
+        String mail = scanner.nextLine();
         String otziv = scanner.nextLine();
         String filename = scanner.nextLine();
         String fileWithHuman = scanner.nextLine();
@@ -24,20 +20,21 @@ public class Main {
                 social.addHuman(name, mail, number, otziv);
                 break;
             case 2:
-                social.addOtzivForHuman(otziv,mail,name,number);
+                social.addOtzivForHuman(otziv, mail, name, number);
                 break;
             case 3:
                 social.HumanFileReader(filename);
-               break;
+                break;
             case 4:
                 social.addHumans(name, mail, fileWithHuman, otziv, number);
                 break;
-        }
 
+        }
+     social.getPeopleOtzivi();
+        social.getHumans();
+        social.getSocial();
     }
 }
-
-
 
 
 
